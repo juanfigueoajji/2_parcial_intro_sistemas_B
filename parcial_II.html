@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Numero 1</label>
+    <input type="number" id="numero1" name="numero1">
+    <label>Numero 2</label>
+    <input type="number" id="numero2" name="numero2"><br>
+
+    <button onclick="sumar()">+</button>
+    <button onclick="restar()">-</button>
+    <button onclick="multiplicar()">*</button>
+    <button onclick="dividir()">/</button><br>
+
+    <label>Resultado</label>
+    <input type="number" id="resultado" name="resultado"> 
+
+    <script>
+        function sumar() {
+            const num1 = parseFloat(document.getElementById("numero1").value);
+            const num2 = parseFloat(document.getElementById("numero2").value);
+            const suma = num1 + num2;
+            document.getElementById("resultado").value = suma;
+        };
+
+        function restar() {
+            const num1 = parseFloat(document.getElementById("numero1").value);
+            const num2 = parseFloat(document.getElementById("numero2").value);
+            const resta = num1 - num2;
+            document.getElementById("resultado").value = resta;
+        };
+
+        function multiplicar() {
+            const num1 = parseFloat(document.getElementById("numero1").value);
+            const num2 = parseFloat(document.getElementById("numero2").value);
+            const multi = num1 * num2;
+            document.getElementById("resultado").value = multi;
+        };
+
+        function dividir() {
+            const num1 = parseFloat(document.getElementById("numero1").value);
+            const num2 = parseFloat(document.getElementById("numero2").value);
+            const division = num1 / num2;
+            document.getElementById("resultado").value = division;
+        };
+        
+    </script>
+</body>
+</html>
